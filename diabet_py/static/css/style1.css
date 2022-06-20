@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    background-image: url('../images/pn.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.containers {
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 0.7rem auto;
+    padding: 0 3rem;
+    z-index: 10;
+  }
+  
+  header {
+      font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    z-index: 70;
+    width: 100%;
+    transition: 0.3s;
+  }
+  header.scrolled{
+    height: 80px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  header .containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container{
+    position: relative;
+    max-width: 81rem;
+    width: 100%;
+    margin: 2rem auto;
+    padding:4rem 5rem 5rem;
+    row-gap: 2rem;
+  
+  }
+  
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .logo img {
+    width: 40px;
+    margin-right: 0.6rem;
+    margin-top: -0.6rem;
+  }
+  
+  .logo h3 {
+    color: #1C0C5B;
+    font-size: 1.30rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  .links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .links a {
+      text-decoration: none;
+    position: relative;
+    color:#371B58;
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .links a:hover {
+    font-weight: 500;
+    color: #646FD4;
+    transform: scale(1.05);
+  }
+  .links a::after{
+    content: "";
+    width: 0;
+    position: absolute;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #D885A3;
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .links a:hover:after{
+    width: 100%;
+    opacity: 0.2;
+  }
+  a {
+    text-decoration: none;
+  }
+
+.registration-form{
+	padding: 50px 0;
+    margin-top: 50px;
+}
+
+.registration-form form{
+    background-color: #fff;
+    max-width: 500px;
+    max-height: 770px;
+    margin: auto;
+    padding: 30px 50px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.registration-form .social-media{
+    max-width: 600px;
+    background-color: #fff;
+    margin: auto;
+    padding: 35px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: #9fadca;
+    border-top: 1px solid #dee9ff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .social-icons{
+    margin-top: 30px;
+    margin-bottom: 16px;
+}
+
+.registration-form .social-icons a{
+    font-size: 23px;
+    margin: 0 3px;
+    color: #5691ff;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 45px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    background-color: #fff;
+    line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+    .registration-form form{
+        padding: 50px 20px;
+    }
+
+    .registration-form .form-icon{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        line-height: 70px;
+    }
+}
+footer{
+  padding: 20px 40px;
+}
+
+.text_footer{
+  text-align: center;
+  color: #283996;
+  opacity: 80%;
+  font-size: 1rem;
+  line-height: 2.3;
+}

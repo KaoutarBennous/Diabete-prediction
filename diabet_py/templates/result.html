@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes</title>
+    <link rel="icon" href="static/images/chu.jfif">
+    <style>
+        *{
+            margin :0;
+            padding :0;
+            box-sizing : border-box;
+            font-family : 'Poppins' , sans-serif;
+        }
+        body{
+            background-image: url('../static/images/pn.png');
+            background-position: center;
+            background-repeat: no-repeat;
+           background-size: cover;
+            height: 100vh;
+        }
+        #container{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:  #151729;
+            box-shadow: 0 15px 30px rgba(0,0,0,.5);
+        }
+        #container .content{
+            max-width: 600px;
+            text-align: center;
+        }
+        #container .content h3 {
+            font-size: 5vw;
+            color: #fff;
+            line-height: 1em;
+            margin-bottom: 50px;
+            margin-top: 2px;
+        }
+        #container .content h4{
+            position: relative;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: red;
+            background: #fff;
+            font-weight: 300;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        #container .content p{
+            color: #fff;
+            font-size: 1.2em;
+        }
+        #container .content a{
+            position: relative;
+            display: inline-block;
+            padding: 10px 25px;
+            background: #ff0562;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 25px;
+            border-radius: 25px;
+            border-bottom: 4px solid #d00d56;
+        }
+         #container1{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:  #151729;
+            box-shadow: 0 15px 30px rgba(0,0,0,.5);
+        }
+        #container1 .content{
+            max-width: 600px;
+            text-align: center;
+        }
+        #container1 .content h3 {
+            font-size: 5vw;
+            color: #fff;
+            line-height: 1em;
+            margin-bottom: 50px;
+            margin-top: 2px;
+        }
+        #container1 .content h4{
+            position: relative;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: green;
+            background: #fff;
+            font-weight: 300;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        #container1 .content p{
+            color: #fff;
+            font-size: 1.2em;
+        }
+        #container1 .content a{
+            position: relative;
+            display: inline-block;
+            padding: 10px 25px;
+            background: #ff0562;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 25px;
+            border-radius: 25px;
+            border-bottom: 4px solid #d00d56;
+        }
+
+    </style>
+</head>
+<body>
+    {% if prediction==1 %}
+        <div id="container">
+            <div class="content" >
+                <h3>Votre test</h3>
+                <h4>Positive</h4>
+                <p>Vous avez un grand risque d'avoir le diabète, consultez votre médecin.</p>
+                <a href="{{ url_for('predict_page')}}">Retour</a>
+            </div>
+        </div>
+    {% elif prediction==0 %}
+        <div id="container1">
+            <div class="content" >
+                <h3>Votre test</h3>
+                <h4>Négative</h4>
+                <p>Vous avez un risque moindre de diabète.</p>
+                <a href="{{ url_for('predict_page')}}">Retour</a>
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>

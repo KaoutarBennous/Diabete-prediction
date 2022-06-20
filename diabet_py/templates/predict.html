@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diabetes</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="static/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style1.css">
+    <link rel="icon" href="static/images/chu.jfif">
+
+    <title>Diabetes</title>
+
+   
+</head>
+<body>
+    <header>
+        <div class="containers">
+          <div class="logo">
+            <img src="../static/images/logo1.png" alt="Logo" />
+            <h3>Diabète</h3>
+          </div>
+
+          <div class="links">
+            <ul>
+              <li><a href="{{ url_for('home_page') }}" >Acceuil</a></li>
+              <li><a href="{{ url_for('home_page') }}">Informations</a></li>
+              <li><a href="{{ url_for('diagrammes_page') }}">Tableau de Bord</a></li>
+              <li><a href="{{ url_for('predict_page') }}" class="">Tester </a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main role="main">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      </div>
+
+        <div class="registration-form">
+
+            <form action="{{ url_for('predict') }}" method="post">
+                <h2 style="text-align:center; margin-bottom: 30px; "> Diabetes Prediction</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="pregnancies" title="Nombre de fois de tomber enceinte pour les femmes, Pour les hommes 0." placeholder="Grossesses" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="glucose" title="Concentration de glucose dans le sang, une glycémie normale 0,7 et 1,1 g/L de sang." placeholder="Glucose" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="bloodpressure" title="Tension artérielle diastolique (mm Hg)." placeholder="Tension artérielle" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="skinthickness" title="La valeur estimé pour la graisse corporelle, l'épissure normale du pli 23mm." placeholder="Epaisseur de la peau" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="insulin" title="La quantité de l’insuline pris (mu U/ ml) pour les patients diabètiques, pour les patients non diabètiques 0." placeholder="Insuline" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="bmi" title="Indice de masse corporelle (poids en kg / (taille en m²))." placeholder="IMC" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="dpf" title="Fournit des informations sur les antécédentes chez les parents, (nombre des diabètiques dans la famille/nombre total de la famille)." placeholder="Fonction généalogique du diabète " required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control item" name="age" placeholder="Age" required="required">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-block create-account" >Tester</button>
+                </div>
+            </form>
+
+        </div>
+
+  
+   
+    </main>
+    <footer>
+        <p class="text_footer">&copy; Copyright 2021-2022 Stage CHU Oujda </p>        
+     
+   </footer>
+    <script src="../static/js/app.js"></script>
+
+</body>
+</html>

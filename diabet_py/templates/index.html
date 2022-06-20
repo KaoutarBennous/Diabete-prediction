@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabete</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--remix icon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="icon" href="static/images/chu.jfif">
+  </head>
+  <body>
+   
+      <div class="big-wrapper light">
+     <!--Header-->
+       <header>
+          <div class="containers">
+            <div class="logo">
+              <img src="../static/images/logo1.png" alt="Logo" />
+              <h3>Diabète</h3>
+            </div>
+
+            <div class="links">
+              <ul>
+                <li><a href="{{ url_for('home_page') }}" >Acceuil</a></li>
+                <li><a href="#service">Informations</a></li>
+                <li><a href="{{ url_for('diagrammes_page') }}">Tableau de Bord</a></li>
+                <li><a href="{{ url_for('predict_page') }}" class="">Tester </a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+     <!--Home Page-->
+        <div class="showcase-area" id="#home">
+          <div class="container">
+            <div class="left">
+              <div class="big-title">
+                <h1>Par <span> un Test de Diabete</span></h1>
+                <h1>Assumez que votre santé est au top!</h1>
+              </div>
+              <p class="text">
+                prenez soin de votre corps et il prendra soin de vous decouvrir votre resultat par une simple clique
+              </p>
+              <div class="cta">
+                <a href="{{ url_for('predict_page') }}" class="btn_two">Tester<i class="ri-service-line button__icon"></i> </a>
+              </div>
+            </div>
+
+            <div class="right">
+              <img src="../static/images/image3d.png" alt="Person Image" class="person" />
+            </div>
+          </div>
+        </div>
+
+       
+     </div>
+      <!--Presentation des services-->
+     <section class="service" id="service">
+      <div class="service_container">
+        <div class="section-header">
+          <h3 class="title" data-title="pour plus">Informations</h3>
+          <p class="text">
+            Aimeriez-vous obtenir de plus amples renseignements sur le diabète?
+            
+          </p>
+        </div>
+      </div>
+        <div class="cards_service" >
+          <div class="container_s">
+            <div class="card">
+              <div class="imgBx">
+                <img src="../static/images/img2.png" style="width: 150px;">
+              </div>
+              <div class="contentBx">
+                <h2>Définition et types </h2>
+                <a href="#diabete section">Voir plus</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgBx">
+                <img src="../static/images/img6.png" style="width: 130px ;">
+              </div>
+              <div class="contentBx">
+                <h2>Les Symptômes</h2>
+                <a href="#Symptomes">Voir plus</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgBx">
+                <img src="../static/images/img4.png" style="width: 270px;">
+              </div>
+              <div class="contentBx">
+                <h2>conseils alimentaires</h2>
+                <a href="#Conseil">Voir plus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>
+     <!--Definition et types de diabetes-->
+     <section class="diabete section" id="diabete section">
+         <div class="diabete_container">
+           <div class="diabete_info">
+             <h1 class="heading">Qu'est ce que le Diabete & Queleques causes</h1>
+                <p class="diabete_text">
+            Le Diabète est une maladie chronique qui apparaît lorsque le pancréas ne produit pas suffisamment d'insuline ou que l'organisme n'utilise pas correctement l'insuline qu'il produit. L'insuline est une hormone qui régule la concentration de sucre dans le sang. Il y a 3 types de diabéte
+                  </p>
+                    <div class="milestones">
+                         <div class="ml">
+                             <h2 class="number"><span data-target="425">0</span>m+</h2>
+                             <h5>au monde</h5>
+                         </div>
+                          <div class="ml">
+                            <h2 class="number"><span data-target="2">0</span>m+</h2>
+                             <h5>au maroc</h5>
+                          </div>
+                      </div>
+                 </div>
+
+             <div class="diabete_grid">
+               <div class="diabete_card">
+                 <div class="card_desc">
+                   <h3>Diabète Type 1</h3>
+                   <p class="text">une maladie auto-immune qui apparaît généralement en bas âge (avant 30 ans) et qui se caractérise par une absence quasi-totale de production d’insuline</p>
+                 </div>
+               </div>
+               <div class="diabete_card">
+                <div class="card_desc">
+                  <h3>Diabète Type 2</h3>
+                  <p class="text"> due à la production insuffisante d’insuline ou a cause de 
+                     l’hormone qui ne fait pas bien son travail ou les cellules présentent une résistance à l’insuline.</p>
+                </div>
+              </div>
+              <div class="diabete_card">
+                <div class="card_desc">
+                  <h3>Diabète gestationnel</h3>
+                  <p class="text"> Chez certaines femmes, le pancréas ne parvient pas à sécréter suffisamment d’insuline pour contrebalancer l’effet de ces hormones, ce qui entraîne donc une hyperglycémie, puis un diabète.</p>
+                </div>
+                
+              </div>
+              <div class="diabete_card">
+                <div class="card_desc">
+                  <h3>Prediabète</h3>
+                  <p class="text">se manifeste par un taux de glucose sanguin plus élevé que la normale, mais inférieur au taux permettant de poser un diagnostic de diabète.</p>
+                </div>
+                
+              </div>
+              
+             </div>
+        
+           
+         </div>
+ 
+<section class="symptomes" id="Symptomes">
+  <div class="section-header">
+    <h3 class="title" data-title="les symptômes ">du diabète</h3>
+    <p class="text">
+      Les premiers symptômes du diabète peuvent être soudains
+
+    </p>
+  </div>
+            <div class="symp_container">
+              <div class="symp_box">
+                <div class="box-heading">
+                  <h1 class="heading_box">Diabète Type 1</h1>
+                  <div class="box-desc">
+                    <p class="text">
+
+                      Les symptômes du diabète de type 1 sont généralement brutaux et passent difficilement inaperçus. 
+                      Il s’agit par exemple : d’un besoin fréquent d’uriner et d'urines abondantes (polyurie) ,
+                       d’une majoration de la soif (polydipsie) , d’un appétit excessif qui s’accompagne d’une perte de poids , 
+                       de l’apparition d’un trouble de la vision , d’une fatigue importante.
+                    </p>
+                    <img src="../static/images/image.png">
+                  </div>
+                  
+                </div>
+                <div class="box-heading">
+                  <h1 class="heading_box">Diabète Type 2</h1>
+                  <div class="box-desc">
+                    <p class="text">
+
+                      Dans un contexte de diabète de type 2, le diagnostic est souvent fait par hasard, car ce type de diabète évolue silencieusement 
+                      sur plusieurs années. Voici quelques symptômes pouvant évoquer ce type de diabète : 
+                      avoir souvent envie d’uriner ; être amené à boire fréquemment ; remarquer que la cicatrisation
+                       d’une plaie prend plus de temps que d’habitude ; la fatigue ; avoir la vision trouble ; la survenue récurrente d’infections
+                    </p>
+                    <img src="../static/images/image.png">
+                  </div>
+                  
+                </div>
+                <div  class="dot-container">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+              </div>
+            </div>
+     </section>
+
+     </section>
+
+
+
+
+
+
+
+
+
+     <section class="Conseil section" id="Conseil">
+      <div class="Conseil_container">
+        <div class="section-header">
+        <h3 class="title" data-title="Conseil pour">Les Diabétique</h3>
+        <div>
+
+        </div>
+      </div>
+          <div class="diabete_grid" style="top: 10%;">
+            <div class=" diabete_card" >
+              <div class="card_desc">
+               
+                <h3 class="Conseil_text">Fruits et légumes :</h3>
+                <p class="text">es fibres, les antioxydants des fruits et légumes peuvent vous aider à gérer votre maladie. Assurez-vous que vos repas vous apportent 3 à 4 portions de légumes et 2 à 3 portions de fruits chaque jour.</p>
+              </div>
+            </div>
+            <div class="diabete_card">
+             <div class="card_desc">
+              
+               <h3>Sucre :</h3>
+               <p class="text"> l ne faut pas supprimer le sucre de son alimentation. En revanche, il faut éviter les boissons ou les aliments très sucrés comme les sodas, les desserts du commerce, le miel ou la confiture tous les jours… Mais une pâtisserie, de temps en temps, n’est pas contre-indiquée, si elle est prise à la fin du repas et non entre les repas.</p>
+             </div>
+           </div>
+           <div class="diabete_card">
+             <div class="card_desc">
+               <h3>L’activité physique :</h3>
+               <p class="text"> Il est conseillé aux personnes atteintes de diabète de type II de faire 30 minutes d’activité d’intensité modérée – marche rapide, vélo, natation, danse, yoga, pilate… – chaque jour.</p>
+             </div>
+             
+           </div>
+           <div class="diabete_card">
+             <div class="card_desc">
+               <h3>Sel : </h3>
+               <p class="text">En limitant votre consommation de sel, vous pouvez mieux contrôler votre tension artérielle.</p>
+             </div>
+             
+           </div>
+           
+          </div>
+     
+        
+      </div>
+      </section>
+     
+     <footer>
+          <p class="text_footer">&copy; Copyright 2021-2022 Stage CHU Oujda </p>        
+       
+     </footer>
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="../static/js/app.js"></script>
+  </body>
+</html>

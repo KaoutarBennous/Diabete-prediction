@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabete</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--remix icon-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="icon" href="static/images/chu.jfif">
+  </head>
+  <body>
+   
+    <div class="big-wrapper light">
+   <!--Header-->
+     <header>
+        <div class="containers">
+          <div class="logo">
+            <img src="../static/images/logo1.png" alt="Logo" />
+            <h3>Diabète</h3>
+          </div>
+
+          <div class="links">
+            <ul>
+              <li><a href="{{ url_for('home_page') }}" >Acceuil</a></li>
+              <li><a href="{{ url_for('home_page') }}">Informations</a></li>
+              <li><a href="{{ url_for('diagrammes_page') }}">Tableau de Bord</a></li>
+              <li><a href="{{ url_for('predict_page') }}" class="">Tester </a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      
+      <!--Home Page-->
+      <div class="showcase-area" id="#home">
+        <div class="container">
+          <div class="left">
+            <div class="big-title_diag">
+              
+              <h1>Découvrir à partir de la base des données <span> Les graphes suivantes</span></h1>
+              <h1>Pour une analyse explicative</h1>
+            </div>
+            <p class="text">
+            Vous trouvez dans cette page des plots avec un commentaire explicatif , ainsi qu'une capture du tableau de bord 
+            </p>
+          
+          </div>
+
+          <div class="right">
+            <img src="../static/images/flat.png" alt="Person Image" class="person" />
+          </div>
+        </div>
+      </div>
+
+     
+   </div>
+  
+   <section class="symptomes" id="Symptomes">
+    <div class="section-header">
+      <h3 class="title" data-title="présentation de ">la base des données</h3>
+      
+    </div>
+              <div class="tab_container">
+                   
+                      <img src="../static/images/fig1.png">
+              </div>
+       </section>
+
+
+
+   <section class="all_diagram section">
+   <section class="diagram section" style="padding:2rem 0">
+    <div class="section-header" style="padding:2rem">
+    <h3 class="title" data-title="présentation des ">Diagrammes</h3>
+    
+  </div>
+    <div class="diagram_container">
+      <div class="diagram_info">
+        <img class="graph" src="../static/images/fig2.png" >
+           <p class="diagram_text">
+            •	Cette figure représente le nombre global des diabétiques et non diabétiques selon l’attribut « Outcome » par rapport à la base de données.
+            Comme il est montré, le nombre des non diabétiques est plus élevé (presque 500 personnes) par rapport au nombre des patients diabétiques .
+            
+             </p>
+               
+            </div>
+
+        <div class="diagram_info">
+        <img class="graph" src="../static/images/fig3.png" >
+        <p class="diagram_text">
+            •	 Ce graphe représente l’attribut « Age » en fonction de la fréquence totale pour les patients diabétiques et non diabétique.
+            A titre d’interprétation, On observe facilement qu’on a 25 personnes qui sont diabétiques et âgée de 20 à 30 ans , d’autre part , les non diabétiques de même âge sont plus de 175 personnes.                 
+        </p>
+        </div>
+    </div>
+    </section>
+    <section class="diagram section" style=" padding: 3rem 0;">
+        <div class="diagram_container">
+          <div class="diagram_info">
+            <img class="graph" src="../static/images/fig4.png" >
+               <p class="diagram_text">
+                •	Ce graphe représente l’attribut « Glucose » en fonction de la fréquence totale pour les patients diabétiques et non diabétique.
+                Pour ce plot, on observe qu’on a 120 personnes non diabétiques ont un glucose qui varie entre 80 et 100 , alors que le nombre des  diabétique est  supérieur à 40 personnes  qu’ ont un glucose entre 125 et 200.
+                                
+                 </p>
+                   
+                </div>
+    
+            <div class="diagram_info">
+            <img class="graph" src="../static/images/fig5.png" style="width: 550px;">
+            <p class="diagram_text">
+                •	Ce graphe représente l’attribut « Fonction généalogique du diabète » en fonction de la fréquence totale pour les patients diabétiques et non diabétique.
+                Pour ce cas, on remarque que la fonction généalogique représente un facteur important chez 70 personnes qui sont attaques par le diabète d’un pourcentage de 5%.
+                            </p>
+            </div>
+        </div>
+        </section>
+        <section class="diagram section" style=" padding: 3rem 0;">
+            <div class="diagram_container">
+              <div class="diagram_info">
+                <img class="graph" src="../static/images/fig6.png" >
+                   <p class="diagram_text">
+                    •	Ce graphe représente l’attribut « BloodPressure » ou « Tension » en fonction de la fréquence totale pour les patients diabétiques et non diabétique.
+On peut voir clairement par ce graphe que les personnes diabétiques ont une tension qui varie entre 60 et 100, mais pour le cas des non diabétiques, leur tension est variée de 60 à 80 .
+
+                     </p>
+                       
+                    </div>
+        
+                <div class="diagram_info">
+                <img class="graph" src="../static/images/fig7.png" >
+                <p class="diagram_text">
+                    •	Ce graphe représente l’attribut « Insulin » en fonction de la fréquence totale pour les patients diabétiques et non diabétique.
+Cette figure montre que les diabétique sont divise en deux groupes, le premier concerne les personnes qui ne prend pas d’insuline « prédiabète » et le deuxième présente les patient diabétique avec une dose d’insuline de 20 à 400 unité  .
+
+                </p>
+                </div>
+            </div>
+            </section>
+            <section class="diagram section" style=" padding: 3rem 0;">
+                <div class="diagram_container">
+                  <div class="diagram_info">
+                    <img class="graph" src="../static/images/fig8.png" >
+                       <p class="diagram_text">
+                        •	Ce graphe représente la relation entre les variables est la matrice de corrélation où chaque cellule remplit en couleur en fonction du coefficient de corrélation de la paire qu’elle représente.
+                        Cette figure montre que « Age » , «  Glucose » et « BMI»  sont des caractéristiques important pour le diagnostic du la maladie de diabète et qui sont fortement non corrélés  les uns aux autres.
+                        
+                         </p>
+                           
+                        </div>
+            
+                    <div class="diagram_info">
+                    <img class="graph" src="../static/images/fig9.png"  style="width: 580px;">
+                    <p class="diagram_text">
+                        •	Ce graphe représente la distribution des patients diabétiques et non diabétique en fonction de glucose et la tension.
+                        On remarque qu'on peut constater que plus le taux de glucose est élevé, plus l'enregistrement est associé à un diabète (résultat = 1, points rouges), tandis que plus il est bas, et plus il est associé à l'absence du diabète (résultat = 0, points bleus).
+                            
+                    </p>
+                    </div>
+                </div>
+                </section>
+            </section>
+            <footer>
+              <p class="text_footer">&copy; Copyright 2021-2022 Stage CHU Oujda </p>        
+           
+         </footer>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="../static/js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+.shiny-input-container{
+    color: #E8C07D;
+    font-size: 16px;
+    }
+     .shiny-input-container:hover{
+    color: aliceblue;
+}
+    h3{
+   font-size: 25px;
+    color:#F9F3EE;
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+ #submitbutton 
+   {
+    cursor: pointer;
+    color: white;
+    background: none;
+    font-family: 'montserat';
+    padding: 10px 25px;
+    font-size:18px;
+    transition: 0.8s;
+     }
+     #submitbutton:hover{
+         color:  #051367;
+         background-color: #E8C07D;
+     }
+     
+
+       #texto{
+       color:black;
+       font-size:15px;
+       }
+     
